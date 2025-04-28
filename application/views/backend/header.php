@@ -12,7 +12,7 @@ date_default_timezone_set('Asia/Dhaka');
     <meta name="author" content="GenIT Bangladesh">
     <!-- Favicon icon -->
     <?php $settingsvalue = $this->settings_model->GetSettingsValue(); ?>
-    <link rel="icon" type="image/ico" sizes="16x16" href="<?php echo base_url(); ?>assets/images/favicon.ico">
+    
     <title><?php echo $settingsvalue->sitetitle; ?></title>
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +60,7 @@ date_default_timezone_set('Asia/Dhaka');
             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="<?php echo base_url(); ?>"><b>
-                        <img src="<?php echo base_url();?>assets/images/logo-icon.png" alt="DRI" class="DRI-logo" style="width:50px;"/>
+                        <img src="<?php echo base_url();?>assets/images/logo-icon1.png" alt="DRI" class="DRI-logo" style="width:50px;"/>
                         </b>
                         <!-- Logo text --><span>
                          <img src="<?php echo base_url(); ?>assets/images/<?php echo $settingsvalue->sitelogo; ?>" alt="homepage" class="dark-logo" height="60px" width="100px" />
