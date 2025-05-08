@@ -4,7 +4,7 @@
             <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor">Settings</h3>
+                    <h3 class="text-themecolor"><i class="fa fa-cogs"></i> Settings</h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -98,7 +98,7 @@
                                         <div class="form-group clearfix">
                                             <div class="col-md-9 col-md-offset-3">
                                                 <input type="hidden" name="id" value="<?php echo $settingsvalue->id; ?>"/>
-                                                <button type="submit" name="submit" id="btnSubmit" class="btn btn-custom">Submit</button>
+                                                <button type="submit" name="submit" id="btnSubmit" class="btn btn-success">Submit</button>
                                                 <span class="flashmessage"><?php echo $this->session->flashdata('feedback'); ?></span>
                                             </div>
                                         </div>

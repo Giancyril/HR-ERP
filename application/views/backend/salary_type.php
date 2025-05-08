@@ -16,7 +16,7 @@
             <div class="container-fluid">
                 <div class="row m-b-10"> 
                     <div class="col-12">
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#TypeModal" data-whatever="@getbootstrap" class="text-white TypeModal"><i class="" aria-hidden="true"></i> Add Payroll </a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#TypeModal" data-whatever="@getbootstrap" class="text-white TypeModal"><i class="" aria-hidden="true"></i> Add Salary Type </a></button>
                         <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="<?php echo base_url(); ?>Payroll/Generate_salary" class="text-white"><i class="" aria-hidden="true"></i>  Generate Payroll</a></button>
                     </div>
                 </div> 
@@ -24,7 +24,7 @@
                     <div class="col-12">
                         <div class="card card-outline-info">
                             <div class="card-header">
-                                <h4 class="m-b-0 text-white"> Payroll List                       
+                                <h4 class="m-b-0 text-white"> Types of Salary                   
                                 </h4>
                             </div>
                             <div class="card-body">
@@ -38,14 +38,14 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>ID </th>
                                                 <th>Salary Type</th>
                                                 <th>Create Date </th>
                                                 <th>Action</th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($typevalue as $value): ?>
                                             <tr>
@@ -53,7 +53,7 @@
                                                 <td><?php echo $value->salary_type ?></td>
                                                 <td><?php echo $value->create_date; ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit" class="btn btn-sm btn-info waves-effect waves-light TypeModal" data-id="<?php echo $value->id; ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light TypeModal" data-id="<?php echo $value->id; ?>"><i class="fa fa-pencil-square-o"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -86,8 +86,8 @@
                                     </div>
                                     <div class="modal-footer">
                                     <input type="hidden" name="id" value="" class="form-control" id="recipient-name1">                                       
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

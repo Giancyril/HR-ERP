@@ -41,7 +41,7 @@ $this->load->view('backend/sidebar');
                    echo base_url();
                    ?>Payroll/Salary_Type" class="text-white">
             <i class="" aria-hidden="true">
-            </i>   Payroll List
+            </i>   Salary Types
           </a>
         </button>
       </div>
@@ -83,7 +83,7 @@ $this->load->view('backend/sidebar');
                     </div>
                   </div> 
                     <div class="form-group col-md-3">
-                    <button style="float:left;margin-top:23px" type="submit" id="BtnSubmit" class="btn btn-primary">Submit</button>          
+                    <button style="float:left;margin-top:23px" type="submit" id="BtnSubmit" class="btn btn-success">Submit</button>          
                      </div>
                                 </form>
                             </div>
@@ -105,7 +105,7 @@ $this->load->view('backend/sidebar');
                     </th>
                   </tr>
                 </thead>
-                <tfoot>
+                <!-- <tfoot>
                   <tr>
                     <th>PIN 
                     </th>
@@ -116,7 +116,7 @@ $this->load->view('backend/sidebar');
                     <th>Action
                     </th>
                   </tr>
-                </tfoot>
+                </tfoot> -->
                 <tbody class="payroll">
                 </tbody>
               </table>
@@ -154,7 +154,7 @@ $this->load->view('backend/sidebar');
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content ">
           <div class="modal-header">
-            <h4 class="modal-title" id="">Salary Setup
+            <h4 class="modal-title" id="">Salary Arrangement
             </h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;
@@ -260,7 +260,7 @@ $this->load->view('backend/sidebar');
               </div>
               <div class="col-md-6">                                     
               <div class="form-group row" id="diduction">
-                <label class="control-label text-left col-md-5">Diduction
+                <label class="control-label text-left col-md-5">Deduction
                 </label>
                 <div class="col-md-7">
                 <input type="text" name="diduction" class="form-control diduction" id="" value="">
@@ -332,9 +332,9 @@ $this->load->view('backend/sidebar');
             <div class="modal-footer">
               <input type="hidden" name="action" value="add" class="form-control" id="formAction">              
               <input type="hidden" name="loan_id" value="" class="form-control" id="loanID">                                      
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close
               </button>
-              <button type="submit" class="btn btn-primary">Submit
+              <button type="submit" class="btn btn-success">Submit
               </button>
             </div>
           </form>

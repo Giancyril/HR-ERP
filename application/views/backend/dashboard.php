@@ -24,7 +24,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
-                                    <div class="round align-self-center round-success"><i class="ti-wallet"></i></div>
+                                    <div class="round align-self-center round-primary"><i class="ti-user"></i></div>
                                     <div class="m-l-10 align-self-center">
                                         <h3 class="m-b-0">
                                     <?php 
@@ -32,7 +32,7 @@
                                         $this->db->from("employee");
                                         echo $this->db->count_all_results();
                                     ?>  Employees</h3>
-                                        <a href="<?php echo base_url(); ?>employee/Employees" class="text-muted m-b-0">View Employee</a></div>
+                                        <a href="<?php echo base_url(); ?>employee/Employees" class="text-muted m-b-0">View Details</a></div>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
-                                    <div class="round align-self-center round-info"><i class="ti-user"></i></div>
+                                    <div class="round align-self-center round-info"><i class="ti-file"></i></div>
                                     <div class="m-l-10 align-self-center">
                                         <h3 class="m-b-0">
                                              <?php 
@@ -52,7 +52,7 @@
                                                     echo $this->db->count_all_results();
                                                 ?> Leaves
                                         </h3>
-                                        <a href="<?php echo base_url(); ?>leave/Application" class="text-muted m-b-0">View Leave</a>
+                                        <a href="<?php echo base_url(); ?>leave/Application" class="text-muted m-b-0">View Details</a>
                                         </div>
                                 </div>
                             </div>
@@ -73,7 +73,7 @@
                                                 echo $this->db->count_all_results();
                                             ?> Projects
                                         </h3>
-                                        <a href="<?php echo base_url(); ?>Projects/All_Projects" class="text-muted m-b-0">View Project</a>
+                                        <a href="<?php echo base_url(); ?>Projects/All_Projects" class="text-muted m-b-0">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -85,16 +85,16 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
-                                    <div class="round align-self-center round-success"><i class="ti-settings"></i></div>
+                                    <div class="round align-self-center round-success"><i class="ti-money"></i></div>
                                     <div class="m-l-10 align-self-center">
                                         <h3 class="m-b-0">
                                          <?php 
                                                 $this->db->where('status','Granted');
                                                 $this->db->from("loan");
                                                 echo $this->db->count_all_results();
-                                            ?> Loan 
+                                            ?> Payslip 
                                         </h3>
-                                        <a href="<?php echo base_url(); ?>Loan/View" class="text-muted m-b-0">View Loan</a>
+                                        <a href="<?php echo base_url(); ?>Loan/View" class="text-muted m-b-0">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
                         <div class="card card-inverse card-info">
-                            <div class="box bg-info text-center">
+                            <div class="box bg-primary text-center">
                                 <h1 class="font-light text-white">
                                     <?php 
                                         $this->db->where('status','INACTIVE');
@@ -117,22 +117,22 @@
                                         echo $this->db->count_all_results();
                                     ?>
                                 </h1>
-                                <h6 class="text-white">Ex-employees</h6>
+                                <h6 class="text-white">Former Employees</h6>
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
-                        <div class="card card-success card-inverse">
+                        <div class="card card-info card-inverse">
                             <div class="box text-center">
                                 <h1 class="font-light text-white">
                                              <?php 
-                                                    $this->db->where('leave_status','Approve');
+                                                    $this->db->where('leave_status','Not Approve');
                                                     $this->db->from("emp_leave");
                                                     echo $this->db->count_all_results();
                                                 ?> 
                                 </h1>
-                                <h6 class="text-white">Leave Application</h6>
+                                <h6 class="text-white">Pending Leave Application</h6>
                             </div>
                         </div>
                     </div>
@@ -147,13 +147,13 @@
                                             echo $this->db->count_all_results();
                                         ?> 
                                 </h1>
-                                <h6 class="text-white">Upcomming Project</h6>
+                                <h6 class="text-white">Upcoming Project</h6>
                             </div>
                         </div>
                     </div>
                     <!-- Column -->
                     <div class="col-md-6 col-lg-3 col-xlg-3">
-                        <div class="card card-inverse card-dark">
+                        <div class="card card-inverse card-success">
                             <div class="box text-center">
                                 <h1 class="font-light text-white">
                                          <?php 
@@ -162,7 +162,7 @@
                                                 echo $this->db->count_all_results();
                                             ?> 
                                 </h1>
-                                <h6 class="text-white">Loan Application</h6>
+                                <h6 class="text-white">Payslip Reports</h6>
                             </div>
                         </div>
                     </div>
@@ -179,33 +179,33 @@
                 ?>
                 <!-- Row -->
                 <div class="row">
-                    <div class="col-lg-8">
+                    
+                    <div class="col-md-8">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Notice Board</h4>
+                                <h4 class="card-title">Running Project/s</h4>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive slimScrollDiv" style="height:600px;overflow-y:scroll">
-                                    <table class="table table-hover earning-box ">
+                                <div class="table-responsive" style="height:600px;overflow-y:scroll">
+                                    <table class="table table-bordered table-hover earning-box">
                                         <thead>
                                             <tr>
                                                 <th>Title</th>
-                                                <th>File</th>
-                                                <th>Date</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           <?php foreach($notice AS $value): ?>
-                                            <tr class="scrollbar" style="vertical-align:top">
-                                                <td><?php echo $value->title ?></td>
-                                                <td><mark><a href="<?php echo base_url(); ?>assets/images/notice/<?php echo $value->file_url ?>" target="_blank"><?php echo $value->file_url ?></a></mark>
-                                                </td>
-                                                <td style="width:100px"><?php echo $value->date ?></td>
+                                           <?php foreach($running AS $value): ?>
+                                            <tr style="vertical-align:top;">
+                                                <td><a href="<?php echo base_url(); ?>Projects/view?P=<?php echo base64_encode($value->id); ?>"><?php echo substr("$value->pro_name",0,25).'...'; ?></a></td>
+                                                <td><?php echo $value->pro_start_date; ?></td>
+                                                <td><?php echo $value->pro_end_date; ?></td>
                                             </tr>
                                             <?php endforeach; ?>
                                         </tbody>
                                     </table>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
                                 <div class="new-todo">
                                    <form method="post" action="add_todo" enctype="multipart/form-data" id="add_todo" >
                                     <div class="input-group">
-                                        <input type="text" name="todo_data" class="form-control" style="border: 1px solid #fff !IMPORTANT;" placeholder="Add new task">
+                                        <input type="text" name="todo_data" class="form-control" style="border: 1px solid #fff !IMPORTANT;" placeholder="Enter New Task...">
                                         <span class="input-group-btn">
                                         <input type="hidden" name="userid" value="<?php echo $this->session->userdata('user_login_id'); ?>">
                                         <button type="submit" class="btn btn-success todo-submit"><i class="fa fa-plus"></i></button>
@@ -252,32 +252,33 @@
                 </div>
                 <!-- Row -->
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-lg-8">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Running Project</h4>
+                                <h4 class="card-title">Notice Board</h4>
                             </div>
                             <div class="card-body">
-                                <div class="table-responsive" style="height:600px;overflow-y:scroll">
-                                    <table class="table table-hover earning-box">
+                                <div class="table-responsive slimScrollDiv" style="height:600px;overflow-y:scroll">
+                                    <table class="table table-hover table-bordered earning-box ">
                                         <thead>
                                             <tr>
                                                 <th>Title</th>
-                                                <th>Start Date</th>
-                                                <th>End Date</th>
+                                                <th>File</th>
+                                                <th>Date</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           <?php foreach($running AS $value): ?>
-                                            <tr style="vertical-align:top;background-color:#e3f0f7">
-                                                <td><a href="<?php echo base_url(); ?>Projects/view?P=<?php echo base64_encode($value->id); ?>"><?php echo substr("$value->pro_name",0,25).'...'; ?></a></td>
-                                                <td><?php echo $value->pro_start_date; ?></td>
-                                                <td><?php echo $value->pro_end_date; ?></td>
+                                           <?php foreach($notice AS $value): ?>
+                                            <tr class="scrollbar" style="vertical-align:top">
+                                                <td><?php echo $value->title ?></td>
+                                                <td><mark><a href="<?php echo base_url(); ?>assets/images/notice/<?php echo $value->file_url ?>" target="_blank"><?php echo $value->file_url ?></a></mark>
+                                                </td>
+                                                <td style="width:100px"><?php echo $value->date ?></td>
                                             </tr>
                                             <?php endforeach; ?>
                                         </tbody>
                                     </table>
-                                </div>                                
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -290,7 +291,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive" style="height:600px;overflow-y:scroll">
-                                    <table class="table table-hover earning-box">
+                                    <table class="table table-hover table-bordered earning-box">
                                        <thead>
                                             <tr>
                                                 <th>Holiday Name</th>

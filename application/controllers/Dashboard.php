@@ -53,7 +53,7 @@ class Dashboard extends CI_Controller {
         $success = $this->dashboard_model->insert_tododata($data);
             #echo "successfully added";
             if($this->db->affected_rows()){
-                echo "successfully added";
+                echo "Successfully Added";
             } else {
                 echo "validation Error";
             }

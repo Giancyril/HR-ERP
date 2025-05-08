@@ -38,15 +38,15 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>Employee PIN</th>
                                                 <th>Employee Name </th>
-                                                <!--<th>Total Day </th>-->
+                                                <th>Total Day </th>
                                                 <th>Total Hour </th>
                                                 <th>Action</th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($earnleave as $value): ?>
                                             <tr>
@@ -56,7 +56,7 @@
                                                 <td><?php echo $value->hour .' Hours' ?></td>
                                                 <?php if($value->present_date > 0){ ?>
                                                <td class="jsgrid-align-center">
-                                                    <a href="" title="Edit" class="btn btn-sm btn-info waves-effect waves-light deductionmodel" data-id="<?php echo $value->em_id; ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light deductionmodel" data-id="<?php echo $value->em_id; ?>"><i class="fa fa-pencil-square-o"></i></a>
                                                 </td>
                                                 <?php } ?>
                                             </tr>
@@ -103,8 +103,8 @@
                                     </div>
                                     <div class="modal-footer">
                                     <input type="hidden" name="eid" value="" class="form-control" id="recipient-name1">                                       
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>
@@ -137,8 +137,8 @@
                                     </div>
                                     <div class="modal-footer">
                                     <input type="hidden" name="eid" value="" class="form-control" id="recipient-name1">                                       
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

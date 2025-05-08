@@ -71,7 +71,7 @@ https://www.patchesoft.com/fullcalendar-with-php-and-codeigniter/
                     <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?>
                         
                         <?php } else { ?>
-                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#holysmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Holiyday </a></button>
+                        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a data-toggle="modal" data-target="#holysmodel" data-whatever="@getbootstrap" class="text-white"><i class="" aria-hidden="true"></i> Add Holiday </a></button>
                         <button type="button" class="btn btn-primary"><i class="fa fa-bars"></i><a href="<?php echo base_url(); ?>leave/Application" class="text-white"><i class="" aria-hidden="true"></i>  Leave Application</a></button>
                         <?php } ?>
                     </div>
@@ -90,12 +90,12 @@ https://www.patchesoft.com/fullcalendar-with-php-and-codeigniter/
                                                 <th>Name</th>
                                                 <th>Start Date </th>
                                                 <th>End Date </th>
-                                                <th>Number of days</th>
+                                                <th>Days</th>
                                                 <th>Year</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Start Date </th>
@@ -104,7 +104,7 @@ https://www.patchesoft.com/fullcalendar-with-php-and-codeigniter/
                                                 <th>Year</th>
                                                 <th>Action</th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($holidays as $value): ?>
                                             <tr>
@@ -114,8 +114,8 @@ https://www.patchesoft.com/fullcalendar-with-php-and-codeigniter/
                                                 <td><?php echo $value->number_of_days; ?></td>
                                                 <td><?php echo $value->year; ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-info waves-effect waves-light holiday" data-id="<?php echo $value->id; ?>"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a onclick="confirm('Are you sure want to delet this Value?')" href="#" title="Delete" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-info waves-effect waves-light holidelet" data-id="<?php echo $value->id; ?>"><i class="fa fa-trash-o"></i></a>
+                                                    <a href="" title="Edit" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-primary waves-effect waves-light holiday" data-id="<?php echo $value->id; ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a onclick="confirm('Are you sure, you want to delete this?')" href="#" title="Delete" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-danger waves-effect waves-light holidelet" data-id="<?php echo $value->id; ?>"><i class="fa fa-trash-o"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -137,15 +137,15 @@ https://www.patchesoft.com/fullcalendar-with-php-and-codeigniter/
                                     <div class="modal-body">
                                         
                                             <div class="form-group">
-                                                <label class="control-label">Holidays name</label>
+                                                <label class="control-label">Name of Holiday</label>
                                                 <input type="text" name="holiname" class="form-control" id="recipient-name1" minlength="4" maxlength="25" value="" required>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Holidays Start Date</label>
+                                                <label class="control-label">Start Date</label>
                                                 <input type="text" name="startdate" class="form-control mydatetimepickerFull" id="recipient-name1"  value="">
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Holidays End Date</label>
+                                                <label class="control-label">End Date</label>
                                                 <input type="text" name="enddate" class="form-control mydatetimepickerFull" id="recipient-name1" value="">
                                             </div><!--
                                             <div class="form-group">
@@ -160,8 +160,8 @@ https://www.patchesoft.com/fullcalendar-with-php-and-codeigniter/
                                     </div>
                                     <div class="modal-footer">
                                     <input type="hidden" name="id" value="" class="form-control" id="recipient-name1">                                       
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

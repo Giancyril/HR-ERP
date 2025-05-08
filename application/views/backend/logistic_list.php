@@ -41,7 +41,7 @@
                                                 <th>Action </th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>ID</th>
                                                 <th>Assets Title </th>
@@ -51,7 +51,7 @@
                                                 <th>Date </th>
                                                 <th>Action </th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($logisticview as $value): ?>
                                             <tr>
@@ -62,8 +62,8 @@
                                                 <td><?php echo $value->quantity ?></td>
                                                 <td><?php echo $value->entry_date ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light assets" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="<?php echo base_url();?>projects/AssetsDelet?D=<?php echo $value->id; ?>" onclick="confirm('Are you Sure??')" title="Delete" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                                    <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light assets" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="<?php echo base_url();?>projects/AssetsDelet?D=<?php echo $value->id; ?>" onclick="confirm('Are you Sure??')" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -109,8 +109,8 @@
                                     </div>
                                     <div class="modal-footer">
                                        <input type="hidden" name="aid" value="">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

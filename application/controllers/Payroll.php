@@ -365,7 +365,7 @@ class Payroll extends CI_Controller {
                     <td>$value->total</td>
                     <td>$hourrate</td>
                     <td>$totalmonthhour</td>
-                    <td><a href='' data-id='$value->em_id' class='btn btn-sm btn-info waves-effect waves-light salaryGenerateModal' data-toggle='modal' data-target='#SalaryTypemodel' data-hour='$totalmonthhour'>Generate Salary</a></td>
+                    <td><a href='' data-id='$value->em_id' class='btn btn-sm btn-danger waves-effect waves-light salaryGenerateModal' data-toggle='modal' data-target='#SalaryTypemodel' data-hour='$totalmonthhour'>Generate Salary</a></td>
                 </tr>";
         }
         
@@ -586,7 +586,7 @@ class Payroll extends CI_Controller {
 
         $work_h_diff = $work_hour_diff;
         //$addition = 0;
-        //$diduction = 0;
+        //$deduction = 0;
         if($work_hour_diff < 0) {
             $addition = abs($work_hour_diff) * $hourly_rate;
         } else if($work_hour_diff > 0) {
@@ -613,7 +613,7 @@ $obj_merged = (object) array_merge((array) $employee_info, (array) $salaryvalueb
                         <div class='card card-body'>
                             <div class='row'>
                                 <div class='col-md-4 col-xs-6 col-sm-6'>
-                                    <img src='$base/assets/images/dri_Logo.png' style=' width:180px; margin-right: 10px;' />
+                                    <img src='$base/assets/images/hrinv.png' style='width:100px; margin-left: 70px;' />
                                 </div>
                                 <div class='col-md-8 col-xs-6 col-sm-6 text-left payslip_address'>
                                     <p>
@@ -693,22 +693,22 @@ $obj_merged = (object) array_merge((array) $employee_info, (array) $salaryvalueb
                                         <tbody style='border: 1px solid #ececec;'>
                                             <tr>
                                                 <td>Basic Salary</td>
-                                                <td class='text-right'>". $addition[0]->basic; echo"BDT</td>
+                                                <td class='text-right'>". $addition[0]->basic; echo"PHP</td>
                                                 <td class='text-right'>  </td>
                                             </tr>
                                             <tr>
-                                                <td>Madical Allowance</td>
-                                                <td class='text-right'>". $addition[0]->medical; echo "BDT</td>
+                                                <td>Medical Allowance</td>
+                                                <td class='text-right'>". $addition[0]->medical; echo "PHP</td>
                                                 <td class='text-right'>  </td>
                                             </tr>
                                             <tr>
                                                 <td>House Rent</td>
-                                                <td class='text-right'>".$addition[0]->house_rent; echo "BDT</td>
+                                                <td class='text-right'>".$addition[0]->house_rent; echo "PHP</td>
                                                 <td class='text-right'>  </td>
                                             </tr>
                                             <tr>
                                                 <td>Conveyance Allowance</td>
-                                                <td class='text-right'>".$addition[0]->conveyance; echo "BDT</td>
+                                                <td class='text-right'>".$addition[0]->conveyance; echo "PHP</td>
                                                 <td class='text-right'>  </td>
                                             </tr>
                                             <tr>
@@ -728,7 +728,7 @@ $obj_merged = (object) array_merge((array) $employee_info, (array) $salaryvalueb
                                                 <td class='text-right'>
                                                 </td>
                                                 <td class='text-right'>
-                                                         $salary_info->diduction BDT 
+                                                         $salary_info->diduction PHP 
                                                 </td>
                                                 <td class='text-right'> </td>
                                             </tr>
@@ -742,13 +742,13 @@ $obj_merged = (object) array_merge((array) $employee_info, (array) $salaryvalueb
                                         <tfoot class='tfoot-light'>
                                             <tr>
                                                 <th>Total</th>
-                                                <th class='text-right'>". $total_add = $salary_info->basic + $salary_info->medical + $salary_info->house_rent + $salary_info->bonus;  round($total_add,2); echo "BDT</th>
-                                                <th class='text-right'>".$total_did = $salary_info->loan + $salary_info->diduction;  round($total_did,2); echo"BDT</th>
+                                                <th class='text-right'>". $total_add = $salary_info->basic + $salary_info->medical + $salary_info->house_rent + $salary_info->bonus;  round($total_add,2); echo "PHP</th>
+                                                <th class='text-right'>".$total_did = $salary_info->loan + $salary_info->diduction;  round($total_did,2); echo"PHP</th>
                                             </tr>
                                             <tr>
                                                 <th></th>
                                                 <th class='text-right'>Net Pay</th>
-                                                <th class='text-right'>$salary_info->total_pay BDT</th>
+                                                <th class='text-right'>$salary_info->total_pay PHP</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -1075,7 +1075,7 @@ $obj_merged = (object) array_merge((array) $employee_info, (array) $salaryvalueb
                                 data-month='$month' 
                                 data-year='$year' 
                                 data-has_loan='$has_loan' 
-                                class='btn btn-sm btn-info waves-effect waves-light salaryGenerateModal' 
+                                class='btn btn-sm btn-danger waves-effect waves-light salaryGenerateModal' 
                                 data-toggle='modal'
                                 data-target='#salaryGenerateModal'>
                         Generate Salary</a></td>

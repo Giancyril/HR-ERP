@@ -24,20 +24,7 @@ $this->load->view('backend/sidebar');
     </div>
   </div>
   <div class="container-fluid">
-    <div class="row m-b-10"> 
-      <div class="col-12">
-        <button type="button" class="btn btn-primary">
-          <i class="fa fa-bars">
-          </i>
-          <a href="<?php
-                   echo base_url();
-                   ?>Payroll/Salary_Type" class="text-white">
-            <i class="" aria-hidden="true">
-            </i>   Payroll List
-          </a>
-        </button>
-      </div>
-    </div> 
+   
     <div class="row">
       <div class="col-12">
         <div class="card card-outline-info">
@@ -75,7 +62,7 @@ $this->load->view('backend/sidebar');
                                       </div>
                                     </div> 
                                       <div class="form-group col-md-3">
-                                      <button style="float:left;margin-top:23px" type="submit" id="BtnSubmit" class="btn btn-primary">Submit</button>          
+                                      <button style="float:left;margin-top:23px" type="submit" id="BtnSubmit" class="btn btn-success">Submit</button>          
                                        </div>
                                 </form>
                             </div>

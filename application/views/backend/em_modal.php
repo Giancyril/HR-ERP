@@ -29,8 +29,8 @@
                                     <div class="modal-footer">
                                         <input type="hidden" name="emid" value=""> 
                                         <input type="hidden" name="id" value=""> 
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>
@@ -56,7 +56,7 @@
 			                                    	</div>
 			                                    	<div class="form-group">
 			                                    	    <label>Address</label>
-			                                    	    <input type="text" name="address" class="form-control form-control-line duty" placeholder=" Duty" minlength="7" required> 
+			                                    	    <input type="text" name="address" class="form-control form-control-line duty" placeholder=" Address" minlength="7" required> 
 			                                    	</div>
 			                                    	<div class="form-group">
 			                                    	    <label>Work Duration</label>
@@ -67,8 +67,8 @@
                                     <div class="modal-footer">
                                         <input type="hidden" name="emid" value=""> 
                                         <input type="hidden" name="id" value=""> 
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

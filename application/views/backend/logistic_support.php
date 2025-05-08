@@ -4,7 +4,7 @@
             <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-map-o"></i> Logistice Support </h3>
+                    <h3 class="text-themecolor"><i class="fa fa-map-o"></i> Logistic Support </h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -43,7 +43,7 @@
                                                 <th>Action </th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>Assets</th>
                                                 <th>Assign User </th>
@@ -54,7 +54,7 @@
                                                 <th>Back Qty</th>
                                                 <th>Action </th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($supportview as $value): ?>
                                             <tr>
@@ -78,7 +78,7 @@
                                                 <td><?php echo $value->back_date; ?></td>
                                                 <td><?php echo $value->back_qty; ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light logisticessupport" data-id="<?php echo $value->ass_id; ?>"><i class="fa fa-pencil-square-o "></i></a>
+                                                    <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light logisticessupport" data-id="<?php echo $value->ass_id; ?>"><i class="fa fa-pencil-square-o "></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -167,8 +167,8 @@
                                     </div>
                                     <div class="modal-footer">
                                        <input type="hidden" name="assid" value="">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>
@@ -254,8 +254,8 @@
                                     </div>
                                     <div class="modal-footer">
                                        <input type="hidden" name="assid" value="">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

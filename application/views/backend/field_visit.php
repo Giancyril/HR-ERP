@@ -55,7 +55,7 @@
                         <th>Action</th>
                      </tr>
                   </thead>
-                  <tfoot>
+                  <!-- <tfoot>
                      <tr>
                         <th>ID</th>
                         <th>Project Name</th>
@@ -69,7 +69,7 @@
                         <th>Status</th>
                         <th>Action</th>
                      </tr>
-                  </tfoot>
+                  </tfoot> -->
                   <tbody>
                      <?php foreach($application as $value): ?>
                      <tr style="vertical-align:top">
@@ -123,7 +123,7 @@
 
                            <?php } ?>
 
-                           <a href="" title="Edit" class="btn btn-sm btn-info waves-effect waves-light fieldAuthEdit" data-id="<?php echo $value->id; ?>" >
+                           <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light fieldAuthEdit" data-id="<?php echo $value->id; ?>" >
                             <i class="fa fa-pencil-square-o"></i>
                            </a>
                            
@@ -258,9 +258,9 @@
             </div>
             <div class="modal-footer">
               <input type="hidden" name="fid">
-               <button type="button" class="btn btn-default" data-dismiss="modal">Close
+               <button type="button" class="btn btn-danger" data-dismiss="modal">Close
                </button>
-               <button type="submit" class="btn btn-primary">Submit
+               <button type="submit" class="btn btn-success">Submit
                </button>
             </div>
          </form>

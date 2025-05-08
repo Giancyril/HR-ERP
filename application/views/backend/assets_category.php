@@ -4,7 +4,7 @@
             <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-cart-plus"></i> Assets</h3>
+                    <h3 class="text-themecolor"><i class="fa fa-th-large"></i> Assets</h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -37,14 +37,14 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>ID </th>
                                                 <th>Type</th>
                                                 <th>Name </th>
                                                 <th>Action</th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($catvalue as $value): ?>
                                             <tr>
@@ -52,7 +52,7 @@
                                                 <td><?php echo $value->cat_status ?></td>
                                                 <td><?php echo $value->cat_name; ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="" title="Edit" class="btn btn-sm btn-info waves-effect waves-light AssetsModal" data-id="<?php echo $value->cat_id; ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light AssetsModal" data-id="<?php echo $value->cat_id; ?>"><i class="fa fa-pencil-square-o"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -89,8 +89,8 @@
                                     </div>
                                     <div class="modal-footer">
                                     <input type="hidden" name="catid" value="" class="form-control" id="recipient-name1">                                       
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

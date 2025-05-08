@@ -33,7 +33,7 @@
                         <div class="card card-body">
                             <div class="row">
                                 <div class="col-md-4 col-xs-6 col-sm-6">
-                                    <img src="<?php echo base_url();?>assets/images/dri_Logo.png" style=" width:180px; margin-right: 10px;" />
+                                    <img src="<?php echo base_url();?>assets/images/hrinv.png" style=" width:180px; margin-right: 10px;" />
                                 </div>
                                 <div class="col-md-8 col-xs-6 col-sm-6 text-left payslip_address">
                                     <p>
@@ -122,22 +122,22 @@
                                         <tbody style="border: 1px solid #ececec;">
                                             <tr>
                                                 <td>Basic Salary</td>
-                                                <td class="text-right"><?php echo $addition[0]->basic; ?> BDT</td>
+                                                <td class="text-right"><?php echo $addition[0]->basic; ?> USD</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
                                                 <td>Madical Allowance</td>
-                                                <td class="text-right"> <?php echo $addition[0]->medical; ?>  BDT</td>
+                                                <td class="text-right"> <?php echo $addition[0]->medical; ?>  USD</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
                                                 <td>House Rent</td>
-                                                <td class="text-right"><?php echo $addition[0]->house_rent; ?>  BDT</td>
+                                                <td class="text-right"><?php echo $addition[0]->house_rent; ?>  USD</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
                                                 <td>Conveyance Allowance</td>
-                                                <td class="text-right"><?php echo $addition[0]->conveyance; ?>  BDT</td>
+                                                <td class="text-right"><?php echo $addition[0]->conveyance; ?>  USD</td>
                                                 <td class="text-right">  </td>
                                             </tr>
                                             <tr>
@@ -149,19 +149,19 @@
                                                 <td>Loan</td>
                                                 <td class="text-right"> </td>
                                                 <td class="text-right"><?php if(!empty($salary_info->loan)) {
-                                                    echo $salary_info->loan . " BDT";
+                                                    echo $salary_info->loan . " USD";
                                                 } ?> </td>
                                             </tr>
                                             <tr>
                                                 <td>Working Hour (<?php echo $salary_info->total_days; ?> hrs)</td>
                                                 <td class="text-right">
                                                     <?php
-                                                        if($a > 0) { echo round($a,2).' BDT'; }
+                                                        if($a > 0) { echo round($a,2).' USD'; }
                                                     ?>
                                                 </td>
                                                 <td class="text-right">
                                                     <?php
-                                                        if($d > 0) { echo round($d,2).' BDT'; }
+                                                        if($d > 0) { echo round($d,2).' USD'; }
                                                     ?>        
                                                 </td>
                                                 <td class="text-right"> </td>
@@ -170,8 +170,8 @@
                                                 <td>Without Pay( <?php echo $work_h_diff ?> hrs)</td>
                                                 <td class="text-right"> </td>
                                                 <td class="text-right"> <?php
-                                                        /*if($d > 0) { echo round($d,2).' BDT'; }*/
-                                                        echo $salary_info->diduction .'BDT';
+                                                        /*if($d > 0) { echo round($d,2).' USD'; }*/
+                                                        echo $salary_info->diduction .'USD';
                                                     ?> </td>
                                                 
                                             </tr>-->
@@ -184,13 +184,13 @@
                                         <tfoot class="tfoot-light">
                                             <tr>
                                                 <th>Total</th>
-                                                <th class="text-right"><?php $total_add = $salary_info->basic + $salary_info->medical + $salary_info->house_rent + $salary_info->bonus+$a; echo round($total_add,2); ?> BDT</th>
-                                                <th class="text-right"><?php $total_did = $salary_info->loan+$salary_info->diduction; echo round($total_did,2); ?> BDT</th>
+                                                <th class="text-right"><?php $total_add = $salary_info->basic + $salary_info->medical + $salary_info->house_rent + $salary_info->bonus+$a; echo round($total_add,2); ?> USD</th>
+                                                <th class="text-right"><?php $total_did = $salary_info->loan+$salary_info->diduction; echo round($total_did,2); ?> USD</th>
                                             </tr>
                                             <tr>
                                                 <th></th>
                                                 <th class="text-right">Net Pay</th>
-                                                <th class="text-right"><?php echo $salary_info->total_pay/*round($total_add - $total_did,2)*/; ?> BDT</th>
+                                                <th class="text-right"><?php echo $salary_info->total_pay/*round($total_add - $total_did,2)*/; ?> USD</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -248,35 +248,35 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Basic Salary</td>
-                                                    <td class="text-right"> <?php echo $salaryvaluebyid->basic;?> BDT</td>
+                                                    <td class="text-right"> <?php echo $salaryvaluebyid->basic;?> USD</td>
                                                     <td class="text-right">  </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Madical</td>
-                                                    <td class="text-right"> <?php echo $salaryvaluebyid->medical;?> BDT </td>
+                                                    <td class="text-right"> <?php echo $salaryvaluebyid->medical;?> USD </td>
                                                     <td class="text-right">  </td>
                                                 </tr>
                                                 <tr>
                                                     <td>House Rent</td>
-                                                    <td class="text-right"> <?php echo $salaryvaluebyid->house_rent;?> BDT </td>
+                                                    <td class="text-right"> <?php echo $salaryvaluebyid->house_rent;?> USD </td>
                                                     <td class="text-right">  </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Conveyance</td>
-                                                    <td class="text-right"> <?php echo $salaryvaluebyid->conveyance;?> BDT </td>
+                                                    <td class="text-right"> <?php echo $salaryvaluebyid->conveyance;?> USD </td>
                                                     <td class="text-right">  </td>
                                                 </tr>
                                                 <tr>
                                                     <td>Loan</td>
                                                     <td class="text-right"> </td>
-                                                    <td class="text-right"><?php echo $salary_info->loan;?>  BDT</td>
+                                                    <td class="text-right"><?php echo $salary_info->loan;?>  USD</td>
                                                 </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr>
                                                     <th>Total</th>
-                                                    <th class="text-right"><?php echo $salaryvaluebyid->total;?> BDT</th>
-                                                    <th class="text-right"><?php echo $salary_info->diduction;?>  BDT</th>
+                                                    <th class="text-right"><?php echo $salaryvaluebyid->total;?> USD</th>
+                                                    <th class="text-right"><?php echo $salary_info->diduction;?>  USD</th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -284,7 +284,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="pull-right m-t-30 text-right">
-                                        <h3><b>Total :</b>  <?php echo $salary_info->total_pay;?> BDT</h3>
+                                        <h3><b>Total :</b>  <?php echo $salary_info->total_pay;?> USD</h3>
                                     </div>
                                     <div class="clearfix"></div>
                                     <hr>
@@ -357,8 +357,8 @@
                             <input type="hidden" name="sid" value="" class="form-control" id="recipient-name1">                                       
                             <input type="hidden" name="aid" value="" class="form-control" id="recipient-name1">                                       
                             <input type="hidden" name="did" value="" class="form-control" id="recipient-name1">                                       
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
                             </div>
                             </form>
                         </div>

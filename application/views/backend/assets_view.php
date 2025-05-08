@@ -4,7 +4,7 @@
         <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-cart-plus"></i> Assets</h3>
+                    <h3 class="text-themecolor"><i class="fa fa-th-large"></i> Asset List</h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -45,10 +45,10 @@
                                                 <th>Action </th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
-<!--                                                <th>ID</th>
-                                                <th>Type </th>-->
+                                               <th>ID</th>
+                                                <th>Type </th>
                                                 <th>category</th>
                                                 <th>Name </th>
                                                 <th>Brand </th>
@@ -58,7 +58,7 @@
                                                 <th>InStock </th>
                                                 <th>Action </th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($assets as $value): ?>
                                             <tr>
@@ -72,7 +72,7 @@
                                                 <td><?php echo substr($value->configuration,0,25).'...'?></td>
                                                 <td><?php echo $value->in_stock ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light assets" data-id="<?php echo $value->ass_id ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light assets" data-id="<?php echo $value->ass_id ?>"><i class="fa fa-pencil-square-o"></i></a>
                                                     <!--<a href="AssetsDelet?D=<?php #echo $value->ass_id; ?>" onclick="confirm('Are you Sure??')" title="Delete" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-trash-o"></i></a>-->
                                                 </td>
                                             </tr>
@@ -128,7 +128,7 @@
                                                 <textarea class="form-control" name="config" id="message-text1" required minlength="14" rows="4"></textarea>
                                             </div>
                                             <div class="form-group">
-                                                <label class="control-label">Purchaseing Date</label>
+                                                <label class="control-label">Purchasing Date</label>
                                                 <input type="text" name="purchase" value="" class="form-control mydatepicker" id="recipient-name1">
                                             </div>
                                             <div class="form-group">
@@ -150,8 +150,8 @@
                                     </div>
                                     <div class="modal-footer">
                                        <input type="hidden" name="aid" value="">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

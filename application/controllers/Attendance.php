@@ -129,7 +129,6 @@ class Attendance extends CI_Controller
                 $sout = new DateTime($new_date . $signout);
                 $hour = $sin->diff($sout);
                 $work = $hour->format('%H h %i m');
-                die($hour);
                 if (empty($id)) {
                     $day = date("D", strtotime($new_date_changed));
                     if($day == "Fri") {
@@ -159,7 +158,7 @@ class Attendance extends CI_Controller
                                 'status' => 'E'
                             );
                         $success = $this->attendance_model->Add_AttendanceData($data);
-                        echo "Successfully updated!";               
+                        echo "Successfully Updated!";               
                         }
                     } elseif($day != "Fri") {
                         $holiday = $this->leave_model->get_holiday_between_dates($new_date_changed);
@@ -190,7 +189,7 @@ class Attendance extends CI_Controller
                                 'status' => 'E'
                                 );
                             $this->attendance_model->Add_AttendanceData($data);
-                            echo "Successfully added.";
+                            echo "Successfully Added";
                         }
                         } else {
                         $duplicate = $this->attendance_model->getDuplicateVal($em_id,$new_date_changed);
@@ -211,7 +210,7 @@ class Attendance extends CI_Controller
                                 'status' => 'A'
                                 );
                             $this->attendance_model->Add_AttendanceData($data);
-                            echo "Successfully added.";
+                            echo "Successfully Added.";
                         }
                     }
                     }
@@ -275,7 +274,7 @@ class Attendance extends CI_Controller
 
             }
         }
-         echo "successfully Updated"; 
+         echo "Successfully Updated"; 
         }
 
 }

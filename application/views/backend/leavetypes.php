@@ -39,14 +39,14 @@
                                         <th>Action</th>
                                     </tr>
                                 </thead>
-                                <tfoot>
+                                <!-- <tfoot>
                                 <tr>
                                         <th>ID </th>
                                         <th>Leave Type</th>
                                         <th>Number Of Days</th>
                                         <th>Action</th>
                                 </tr>
-                                </tfoot>
+                                </tfoot> -->
                                 <tbody>
                                     <?php foreach($leavetypes as $value): ?>
                                     <tr>
@@ -54,8 +54,8 @@
                                         <td><?php echo $value->name ?></td>
                                         <td><?php echo $value->leave_day ?></td>
                                         <td class="jsgrid-align-center ">
-                                            <a href="" title="Edit" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-info waves-effect waves-light leavetype" data-id="<?php echo $value->type_id; ?>"><i class="fa fa-pencil-square-o"></i></a>
-                                            <a onclick="confirm('Are you sure want to delet this Value?')" href="LeavetypeDelet?D=<?php echo $value->type_id; ?>" title="Delete" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                            <a href="" title="Edit" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-primary waves-effect waves-light leavetype" data-id="<?php echo $value->type_id; ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                            <a onclick="confirm('Are you sure, you want to delete this?')" href="LeavetypeDelet?D=<?php echo $value->type_id; ?>" title="Delete" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> hidden <?php } ?> class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>
@@ -96,8 +96,8 @@
                         </div>
                         <div class="modal-footer">
                             <input type="hidden" name="id" value="" class="form-control" id="recipient-name1">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </form>
                 </div>

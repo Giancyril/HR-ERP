@@ -4,7 +4,7 @@
             <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-university" aria-hidden="true"></i> Payroll</h3>
+                    <h3 class="text-themecolor"><i class="fa fa-bars" aria-hidden="true"></i> Payroll</h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -40,7 +40,7 @@
                                                 <th>Month </th>
                                                 <th>Salary </th>
                                                 <th>Loan </th>
-                                                <th>Total hours </th>
+                                                <th>Hours </th>
                                                 <th>Deduction</th>
                                                 <th>Total Paid</th>
                                                 <th>Pay Date</th>
@@ -48,7 +48,7 @@
                                                 <th class="jsgrid-align-center">Action</th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th class="hide">SL </th>
                                                 <th>PIN </th>
@@ -57,14 +57,14 @@
                                                 <th>Salary </th>
                                                 <th>Loan </th>
                                                 <th>Total hours </th>
-                                                <!--<th>Earning</th>-->
+                                                <th>Earning</th>
                                                 <th>Deduction</th>
                                                 <th>Total Paid</th>
                                                 <th>Pay Date</th>
                                                 <th>Status</th>
                                                 <th class="jsgrid-align-center">Action</th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
 
                                            <?php $i =0; foreach($salary_info as $individual_info): ?>
@@ -73,16 +73,16 @@
                                                 <td><?php echo $individual_info->em_code; ?></td>
                                                 <td><?php echo $individual_info->first_name.' '.$individual_info->last_name; ?></td>
                                                 <td><?php echo $individual_info->month.' '.$individual_info->year; ?></td>
-                                                <td><?php echo $individual_info->basic; ?></td>
-                                                <td><?php echo $individual_info->loan; ?></td>
+                                                <td><?php echo '₱'.$individual_info->basic; ?></td>
+                                                <td><?php echo '₱'.$individual_info->loan; ?></td>
                                                 <td><?php echo $individual_info->total_days; ?></td>
                                                 <!--<td><?php echo $individual_info->addition; ?></td>-->
-                                                <td><?php echo $individual_info->diduction; ?></td>
-                                                <td><?php echo $individual_info->total_pay; ?></td>
+                                                <td><?php echo '₱'.$individual_info->diduction; ?></td>
+                                                <td><?php echo '₱'.$individual_info->total_pay; ?></td>
                                                 <td><?php echo $individual_info->paid_date; ?></td>
                                                 <td><?php echo $individual_info->status; ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="<?php echo base_url(); ?>payroll/invoice?Id=<?php echo $individual_info->pay_id; ?>&em=<?php echo $individual_info->emp_id; ?>" title="Edit" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-print"></i></a>
+                                                    <a href="<?php echo base_url(); ?>payroll/invoice?Id=<?php echo $individual_info->pay_id; ?>&em=<?php echo $individual_info->emp_id; ?>" title="Edit" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-print"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -137,7 +137,7 @@
                                                 <input type="text" name="provident" class="form-control" id="recipient-name1" value="">
                                             </div>                                         
                                             <div class="form-group">
-                                                <label class="control-label">Bima</label>
+                                                <label class="control-label">Insurance</label>
                                                 <input type="text" name="bima" class="form-control" id="recipient-name1" value="" >
                                             </div>
                                             <div class="form-group">
@@ -154,8 +154,8 @@
                                     <input type="hidden" name="sid" value="" class="form-control" id="recipient-name1">                                       
                                     <input type="hidden" name="aid" value="" class="form-control" id="recipient-name1">                                       
                                     <input type="hidden" name="did" value="" class="form-control" id="recipient-name1">                                       
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>
@@ -226,7 +226,7 @@ var y = d.getFullYear();
                     $(win.document.body)
                         .css( 'font-size', '50pt' )
                         .prepend(
-                            '<img src="<?php echo base_url()?>assets/images/dRi_watermark.png" style="position:absolute;background-size:300px 300px; top:35%; left:27%;" />'
+                            '<img src="<?php echo base_url()?>assets/images/wtmark.png" style="position:absolute;background-size:300px 300px; top:35%; left:27%;" />'
                         );
                     $(win.document.body)
                         //.css( 'border', 'inherit' )
@@ -246,7 +246,7 @@ var y = d.getFullYear();
                         .css( 'background-position', 'left top' )
                         .css( 'height', '100px' )
                         .prepend(
-                            '<img src="<?php echo base_url()?>assets/images/dri_Logo.png" style="position:absolute;background-size:30%; top:0; left:0;" />'
+                            '<img src="<?php echo base_url()?>assets/images/hrinv.png" style="position:absolute;background-size:30%; top:0; left:0;" />'
                         );
                     $(win.document.body).find( 'div img' )
                         .addClass( 'header-img' )

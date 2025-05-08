@@ -35,7 +35,7 @@
                                         <th>Date</th>
                                     </tr>
                                 </thead>
-                                <tfoot>
+                                <!-- <tfoot>
                                 <tr>
                                     <th>Em ID </th>
                                     <th>Name</th>
@@ -44,7 +44,7 @@
                                     <th>Hour</th>
                                     <th>Date</th>
                                 </tr>
-                                </tfoot>
+                                </tfoot> -->
                                 <tbody>
                                     <?php foreach($embalance as $value): ?>
                                     <tr>

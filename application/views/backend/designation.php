@@ -43,8 +43,8 @@
                                     <!--/row-->
                                 </div>
                                 <div class="form-actions">
-                                    <button type="submit" class="btn btn-info"> <i class="fa fa-check"></i> Save</button>
-                                    <button type="button" class="btn btn-info">Cancel</button>
+                                    <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                                    <button type="button" class="btn btn-danger">Cancel</button>
                                 </div>
                             </form>
                     </div>
@@ -76,8 +76,8 @@
                                     <!--/row-->
                                 </div>
                                 <div class="form-actions">
-                                    <button type="submit" class="btn btn-info"> <i class="fa fa-check"></i> Save</button>
-                                    <button type="button" class="btn btn-info">Cancel</button>
+                                    <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                                    <button type="button" class="btn btn-danger">Cancel</button>
                                 </div>
                             </form>
                     </div>
@@ -100,19 +100,19 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>Designation </th>
                                     <th>Action</th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                 <?php foreach ($designation as $value) {?>
                                 <tr>
                                     <td><?php echo $value->des_name;?></td>
                                     <td class="jsgrid-align-center ">
-                                        <a href="<?php echo base_url();?>organization/Edit_des/<?php echo $value->id?>" title="Edit" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a onclick="return confirm('Are you sure to delete this data?')"  href="<?php echo base_url();?>organization/des_delete/<?php echo $value->id;?>" title="Delete" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                        <a href="<?php echo base_url();?>organization/Edit_des/<?php echo $value->id?>" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a onclick="return confirm('Are you sure to delete this data?')"  href="<?php echo base_url();?>organization/des_delete/<?php echo $value->id;?>" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                 </tr>
                                 <?php }?>
