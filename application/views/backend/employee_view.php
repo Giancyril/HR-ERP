@@ -187,7 +187,7 @@
                                                     <?php } else { ?>
 				                                    <div class="form-actions col-md-12">
                                                         <input type="hidden" name="emid" value="<?php echo $basic->em_id; ?>">
-				                                        <button type="submit" class="btn btn-info"> <i class="fa fa-check"></i> Save</button>
+				                                        <button type="submit" class="btn btn-info"> <i class="fa fa-check"></i>Save</button>
 				                                        <button type="button" class="btn btn-info">Cancel</button>
 				                                    </div>
 				                                    <?php } ?>

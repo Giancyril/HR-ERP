@@ -4,7 +4,7 @@
                     <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-university" aria-hidden="true"></i> Projects</h3>
+                    <h3 class="text-themecolor"><i class="fa fa-archive" aria-hidden="true"></i> Projects</h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -87,7 +87,7 @@
                                                 <input type="text" name="enddate" value="<?php echo $details->pro_end_date; ?>" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> readonly <?php } ?> class="form-control mydatepicker" id="recipient-name1" required>
                                             </div>
                                             <div class="form-group">
-                                                <label for="message-text" class="control-label">Project Summery</label>
+                                                <label for="message-text" class="control-label">Project Summary</label>
                                                 <textarea class="form-control" value="<?php echo $details->pro_summary; ?>" name="summery" rows="6" id="message-text1" minlength="5" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> readonly <?php } ?> maxlength="512" ><?php echo $details->pro_summary; ?></textarea>
                                             </div>
                                             <div class="form-group">
@@ -107,8 +107,8 @@
                                     </div>
                                     <div class="modal-footer">
                                        <input type="hidden" name="proid" value="<?php echo $details->id; ?>">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> disabled <?php } ?> class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> disabled <?php } ?> class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
 				                        </div>
@@ -133,7 +133,7 @@
                                     <th>Assigned users </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>Id</th>
                                     <th>Task Title </th>
@@ -141,7 +141,7 @@
                                     <th>End Date </th>
                                     <th>Assigned users </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($tasklist as $value): ?>
                                 <tr>
@@ -185,7 +185,7 @@
                                     <th>Action </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>Id</th>
                                     <th>Task Title </th>
@@ -194,7 +194,7 @@
                                     <th>Assigned users </th>
                                     <th>Action </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($tasklist as $value): ?>
                                 <tr>
@@ -220,8 +220,8 @@
                                         
                                     <?php } else { ?>
                                     <td class="jsgrid-align-center ">
-                                        <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light taskmodal" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a onclick="alert('Are you sure want to delet this Value?')" href="#" title="Delete" class="btn btn-sm btn-info waves-effect waves-light TasksDelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
+                                        <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light taskmodal" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a onclick="alert('Are you sure, you want to delete this?')" href="#" title="Delete" class="btn btn-sm btn-info waves-effect waves-light TasksDelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                     <?php } ?>
                                 </tr>
@@ -251,7 +251,7 @@
                                     <th>Status </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>Id</th>
                                     <th>Task Title </th>
@@ -260,7 +260,7 @@
                                     <th>Assigned users </th>
                                     <th>Status </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($tasklist as $value): ?>
                                 <tr>
@@ -284,8 +284,8 @@
                                         </td> -->                                   
                                     <?php } else { ?>
                                     <td class="jsgrid-align-center ">
-                                        <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light taskmodal" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a onclick="alert('Are you sure want to delet this Value?')" href="#" title="Delete" class="btn btn-sm btn-info waves-effect waves-light TasksDelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
+                                        <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light taskmodal" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a onclick="alert('Are you sure, you want to delete this?')" href="#" title="Delete" class="btn btn-sm btn-info waves-effect waves-light TasksDelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                     <?php } ?>
                                 </tr>
@@ -309,14 +309,14 @@
                                     <th>Action </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>File details</th>
                                     <th>file</th>
                                     <th>Assigned Employee </th>
                                     <th>Action </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($files as $value): ?>
                                 <tr>
@@ -363,8 +363,8 @@
 			                                    </div>
 			                                    <div class="form-actions col-md-6">
                                                     <input type="hidden" name="proid" value="<?php echo $details->id; ?>">
-			                                        <button type="submit" class="btn btn-info"> <i class="fa fa-check"></i> Save</button>
-			                                        <button type="button" class="btn btn-info">Cancel</button>
+			                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+			                                        <button type="button" class="btn btn-danger">Cancel</button>
 			                                    </div>
 			                                </form>
 			                                <?php } ?>
@@ -383,22 +383,22 @@
                                     <th>Status </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>Note title</th>
                                     <th>Assigned users </th>
                                     <th>Status </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($notes as $value): ?>
                                 <tr>
                                     <td><?php echo substr($value->details,0,60).'...'; ?></td>
                                     <td><img src="<?php echo base_url(); ?>assets/images/users/<?php echo $value->em_image ?>" height="40px" width="40px" style="border-radius:50px" alt=""></td>
                                     <td class="jsgrid-align-center ">
-                                        <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light notes" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light notes" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
                                         <?php if($this->session->userdata('user_type')!='EMPLOYEE'){ ?>
-                                        <a href="#" title="Delete" class="btn btn-sm btn-info waves-effect waves-light notesdelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
+                                        <a href="#" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light notesdelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
                                         <?php } ?>
                                     </td>
                                 </tr>
@@ -427,7 +427,7 @@
 		                                    	<div class="form-actions col-md-12">
                                                     <input type="hidden" name="id" value="">
                                                     <input type="hidden" name="proid" value="<?php echo $details->id; ?>">
-		                                    	    <button <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> disabled <?php } ?> type="submit" class="btn btn-info"> <i class="fa fa-check"></i> Save</button>
+		                                    	    <button <?php if($this->session->userdata('user_type')=='EMPLOYEE'){ ?> disabled <?php } ?> type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
 		                                    	    <button type="button" class="btn btn-info">Cancel</button>
 		                                    	</div>
 			                                </form>
@@ -448,7 +448,7 @@
                                     <th>Status </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>Details</th>
                                     <th>Assigned users </th>
@@ -456,7 +456,7 @@
                                     <th>Amount </th>
                                     <th>Status </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($expenses as $value): ?>
                                 <tr>
@@ -467,8 +467,8 @@
                                     <td><?php echo $value->amount ?></td>
                                     <td class="jsgrid-align-center ">
                                        <?php if($this->session->userdata('user_type')!='EMPLOYEE'){ ?>
-                                        <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light expenses" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a href="#" onclick="confirm('are you sure want to delet this value')" title="Delete" class="btn btn-sm btn-info waves-effect waves-light exdelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
+                                        <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light expenses" data-id="<?php echo $value->id ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#" onclick="confirm('Are you sure to delete this value?')" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light exdelet" data-id="<?php echo $value->id ?>"><i class="fa fa-trash-o"></i></a>
                                         <?php } ?>
                                     </td>
                                 </tr>
@@ -506,7 +506,7 @@
 			                                    <div class="form-actions col-md-12">
                                                     <input type="hidden" name="id" value="">                                                
                                                     <input type="hidden" name="proid" value="<?php echo $details->id; ?>">                                                
-			                                        <button type="submit" class="btn btn-info"> <i class="fa fa-check"></i> Save</button>
+			                                        <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
 			                                        <button type="button" class="btn btn-info">Cancel</button>
 			                                    </div>
 			                                </form>
@@ -527,7 +527,7 @@
                                     <th>Status </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>ID</th>
                                     <th>Details</th>
@@ -536,7 +536,7 @@
                                     <th>Amount </th>
                                     <th>Status </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($expenses as $value): ?>
                                 <tr>
@@ -547,8 +547,8 @@
                                     <td><?php echo $value->date ?></td>
                                     <td><?php echo $value->amount ?></td>
                                     <td class="jsgrid-align-center ">
-                                        <a href="edit-employee.php" title="Edit" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                        <a href="#" title="Delete" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
+                                        <a href="edit-employee.php" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#" title="Delete" class="btn btn-sm btn-danger waves-effect waves-light"><i class="fa fa-trash-o"></i></a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
@@ -588,7 +588,7 @@
                                     <th>Action </th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>Logistic Name</th>
                                     <th>Assigned users </th>
@@ -597,7 +597,7 @@
                                     <th>End Date </th>
                                     <th>Action </th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                                <?php foreach($logisticlist as $value): ?>
                                 <tr>
@@ -607,7 +607,7 @@
                                     <td><?php echo $value->start_date ?></td>
                                     <td><?php echo $value->end_date ?></td>
                                     <td class="jsgrid-align-center ">
-                                        <a href="#" title="Edit" class="btn btn-sm btn-info waves-effect waves-light logisticeid" id="logisticeid" data-id="<?php echo $value->ass_id ?>"><i class="fa fa-pencil-square-o"></i></a>
+                                        <a href="#" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light logisticeid" id="logisticeid" data-id="<?php echo $value->ass_id ?>"><i class="fa fa-pencil-square-o"></i></a>
                                         <!--<a href="#" title="Delete" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-trash-o"></i></a>-->
                                     </td>
                                 </tr>

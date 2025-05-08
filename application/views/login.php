@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HR Payroll</title>
+    <title>HR-ERP</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -89,7 +89,7 @@
 
             <form class="form-horizontal form-material" method="post" id="loginform" action="login/Login_Auth">
                 <a href="javascript:void(0)" class="text-center db">
-                    <img src="<?php echo base_url(); ?>assets/images/logo-icon.png" alt="Home" />
+                    <img src="<?php echo base_url(); ?>assets/images/logo-icon1.png" alt="Home" />
                 </a>
 
                 <div class="form-group m-t-40">

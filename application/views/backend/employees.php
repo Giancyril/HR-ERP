@@ -78,7 +78,7 @@
         "aaSorting": [[1,'asc']],
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+             'csv', 'excel', 'pdf', 'print'
         ]
     });
 </script>

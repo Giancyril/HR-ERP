@@ -4,7 +4,7 @@
             <div class="message"></div>
             <div class="row page-titles">
                 <div class="col-md-5 align-self-center">
-                    <h3 class="text-themecolor"><i class="fa fa-university" aria-hidden="true"></i> Projects</h3>
+                    <h3 class="text-themecolor"><i class="fa fa-archive" aria-hidden="true"></i> Projects</h3>
                 </div>
                 <div class="col-md-7 align-self-center">
                     <ol class="breadcrumb">
@@ -53,7 +53,7 @@
                                                 <th>Action </th>
                                             </tr>
                                         </thead>
-                                        <tfoot>
+                                        <!-- <tfoot>
                                             <tr>
                                                 <th>Project Title</th>
                                                 <th>Status </th>
@@ -61,7 +61,7 @@
                                                 <th>End Date </th>
                                                 <th>Action </th>
                                             </tr>
-                                        </tfoot>
+                                        </tfoot> -->
                                         <tbody>
                                            <?php foreach($projects as $value): ?>
                                             <tr>
@@ -70,8 +70,8 @@
                                                 <td><?php echo date('jS \of F Y',strtotime($value->pro_start_date)); ?></td>
                                                 <td><?php echo date('jS \of F Y',strtotime($value->pro_end_date)) ?></td>
                                                 <td class="jsgrid-align-center ">
-                                                    <a href="view?P=<?php echo base64_encode($value->id); ?>" title="Edit" class="btn btn-sm btn-info waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
-                                                    <a href="pDelet?D=<?php echo base64_encode($value->id); ?>" title="Delete" onclick="alert('Are Yoy Want To Delet This Project!!!')" class="btn btn-sm btn-info waves-effect waves-light projectdelet"><i class="fa fa-trash-o"></i></a>
+                                                    <a href="view?P=<?php echo base64_encode($value->id); ?>" title="Edit" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-pencil-square-o"></i></a>
+                                                    <a href="pDelet?D=<?php echo base64_encode($value->id); ?>" title="Delete" onclick="alert('Are You Sure To Delete This Project?')" class="btn btn-sm btn-danger waves-effect waves-light projectdelet"><i class="fa fa-trash-o"></i></a>
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>
@@ -107,7 +107,7 @@
                                                 <input type="text" name="enddate" class="form-control datepicker" id="recipient-name1" required placeholder="">
                                             </div>
                                             <div class="form-group">
-                                                <label for="message-text" class="control-label">Summery</label>
+                                                <label for="message-text" class="control-label">Summary</label>
                                                 <textarea class="form-control" name="summery" id="message-text1" placeholder=""></textarea>
                                             </div>
                                             </div>
@@ -128,8 +128,8 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
                                     </div>
                                     </form>
                                 </div>

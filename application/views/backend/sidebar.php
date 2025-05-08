@@ -10,7 +10,7 @@
                     <!-- User profile image -->
                     <div class="profile-img"> <img src="<?php echo base_url(); ?>assets/images/users/<?php echo $basicinfo->em_image ?>" alt="user" />
                         <!-- this is blinking heartbit-->
-                        <div class="notify setpos"> <span class="heartbit"></span> <span class="point"></span> </div>
+                        
                     </div>
 
                     <!-- User profile text-->
@@ -36,13 +36,19 @@
                                 <li><a href="<?php echo base_url(); ?>leave/EmLeavesheet"> Leave Sheet </a></li>
                             </ul>
                         </li> 
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-briefcase-check"></i><span class="hide-menu">Projects </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?php echo base_url(); ?>Projects/All_Projects">Projects </a></li>
-                                <li><a href="<?php echo base_url(); ?>Projects/All_Tasks"> Task List </a></li>
-                                <!--<li><a href="<?php #echo base_url(); ?>Projects/All_Tasks"> Field Visit</a></li>-->
-                            </ul>
-                        </li>                                                                       
+                                             
+                        
+                        <li>
+                             <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url(); ?>Payroll/Payslip_Report" aria-expanded="false">
+                             <i class="mdi mdi-newspaper"></i>
+                             <span class="hide-menu">Payroll</span>
+                            </a>
+                        </li>
+
+
+
+
+                        
                         <?php } else { ?>
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-building-o"></i><span class="hide-menu">Organization </span></a>
                             <ul aria-expanded="false" class="collapse">
@@ -57,13 +63,9 @@
                                 <li><a href="<?php echo base_url(); ?>employee/Inactive_Employee">Inactive User </a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-clipboard-text"></i><span class="hide-menu">Attendance </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?php echo base_url(); ?>attendance/Attendance">Attendance List </a></li>
-                                <li><a href="<?php echo base_url(); ?>attendance/Save_Attendance">Add Attendance </a></li>
-                                <li><a href="<?php echo base_url(); ?>attendance/Attendance_Report">Attendance Report </a></li>
-                            </ul>
-                        </li>
+                       
+
+                        
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-rocket"></i><span class="hide-menu">Leave </span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="<?php echo base_url(); ?>leave/Holidays"> Holiday </a></li>
@@ -73,13 +75,8 @@
                                 <li><a href="<?php echo base_url(); ?>leave/Leave_report"> Report </a></li>
                             </ul>
                         </li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-briefcase-check"></i><span class="hide-menu">Project </span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="<?php echo base_url(); ?>Projects/All_Projects">Projects </a></li>
-                                <li><a href="<?php echo base_url(); ?>Projects/All_Tasks"> Task List </a></li>
-                                <li><a href="<?php echo base_url(); ?>Projects/Field_visit"> Field Visit</a></li>
-                            </ul>
-                        </li>
+                       
+
                        
                         <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-newspaper"></i><span class="hide-menu">Payroll </span></a>
                             <ul aria-expanded="false" class="collapse">
@@ -89,6 +86,7 @@
                                 <li><a href="<?php echo base_url(); ?>Payroll/Payslip_Report"> Payslip Report</a></li>
                             </ul>
                         </li>
+                        
                         <li> <a href="<?php echo base_url()?>notice/All_notice" ><i class="mdi mdi-treasure-chest"></i><span class="hide-menu">Notice <span class="hide-menu"></a></li>
                         <li> <a href="<?php echo base_url(); ?>settings/Settings" ><i class="mdi mdi-settings"></i><span class="hide-menu">Settings <span class="hide-menu"></a></li>
                         <?php } ?>
